@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD344B03-B003-4634-82B2-300C00FA1855}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Traffic_Simulator_V3</RootNamespace>
+    <AssemblyName>Traffic Simulator V3</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="AppSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>AppSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Introduction.cs" />
+    <Compile Include="MainWindowTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestOverloadException.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="Crossroad.cs" />
+    <Compile Include="MainWindowUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindowUI.Designer.cs">
+      <DependentUpon>MainWindowUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Score.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>UserSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle.cs" />
+    <Compile Include="Distributor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainWindowUI.resx">
+      <DependentUpon>MainWindowUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="AppSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>AppSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="pictures\Gimp Pictures\MB straight.png" />
+    <None Include="UserSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>UserSettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Crossroad V3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Sources Pictures\MB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\MB straight V2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\FER straight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\MINI straight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\GTO straight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\FER left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\FER\FER left east.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MINI\MINI left east.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MINI\MINI left north.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MINI\MINI left south.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MINI\MINI left west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MINI\MINI right east.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MINI\MINI right north.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MINI\MINI right south.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MINI\MINI right west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MINI\MINI straight east.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MINI\MINI straight north.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MINI\MINI straight south.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MINI\MINI straight west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\FER\FER left north.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\FER\FER left south.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\FER\FER left west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\FER\FER right east.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\FER\FER right north.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\FER\FER right south.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\FER\FER right west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\FER\FER straight east.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\FER\FER straight north.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\FER\FER straight south.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\FER\FER straight west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\GTO\GTO left east.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\GTO\GTO left north.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\GTO\GTO left south.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\GTO\GTO left west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\GTO\GTO right east.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\GTO\GTO right north.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\GTO\GTO right south.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\GTO\GTO right west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\GTO\GTO straight east.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\GTO\GTO straight north.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\GTO\GTO straight south.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\GTO\GTO straight west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MB\MB left east.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MB\MB left north.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MB\MB left south.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MB\MB left west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MB\MB right east.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MB\MB right north.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MB\MB right south.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MB\MB right west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MB\MB straight east.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MB\MB straight north.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MB\MB straight south.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Vehicles\MB\MB straight west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\TrafficLight\GreenSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\TrafficLight\RedSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\TrafficLightSkew\GreenOnAsphalt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\TrafficLightSkew\GreenOnGrass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\TrafficLightSkew\RedOnAsphalt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\TrafficLightSkew\RedOnGrass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Numbers\number1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Numbers\number2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Numbers\number3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Numbers\number4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\CorrectWrong\correct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\CorrectWrong\wrong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\Numbers\number0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\PassedFailed\Failed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Gimp Pictures\PassedFailed\Passed.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
